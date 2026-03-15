@@ -1,0 +1,30 @@
+name: InTouch
+options:
+  bundleIdPrefix: com.intouch
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "16"
+  generateEmptyDirectories: true
+
+packages:
+  Supabase:
+    url: https://github.com/supabase/supabase-swift
+    from: 2.0.0
+
+targets:
+  InTouch:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: InTouch
+    resources:
+      - path: InTouch/Assets.xcassets
+    dependencies:
+      - package: Supabase
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.intouch.app
+        SWIFT_VERSION: 5.9
+        INFOPLIST_FILE: InTouch/Info.plist
+        TARGETED_DEVICE_FAMILY: "1,2"
