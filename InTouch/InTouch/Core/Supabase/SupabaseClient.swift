@@ -6,6 +6,6 @@ import Supabase
 // from: Supabase Dashboard → Project Settings → API
 
 let supabase = SupabaseClient(
-    supabaseURL: URL(string: "YOUR_SUPABASE_URL")!,
-    supabaseKey: "YOUR_SUPABASE_ANON_KEY"
+    supabaseURL: URL(string: SupabaseConfig.url)!,
+    supabaseKey: SupabaseConfig.anonKey
 )

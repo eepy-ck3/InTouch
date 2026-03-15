@@ -1,0 +1,20 @@
+# Supabase credentials — never commit real keys
+InTouch/InTouch/Core/Supabase/SupabaseConfig.swift
+
+# Xcode
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.moved-aside
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+*.resolved
+
+# macOS
+.DS_Store
