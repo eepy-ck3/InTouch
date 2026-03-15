@@ -28,3 +28,6 @@ targets:
         SWIFT_VERSION: 5.9
         INFOPLIST_FILE: InTouch/Info.plist
         TARGETED_DEVICE_FAMILY: "1,2"
+        CODE_SIGNING_REQUIRED: NO
+        CODE_SIGNING_ALLOWED: NO
+        CODE_SIGN_IDENTITY: ""

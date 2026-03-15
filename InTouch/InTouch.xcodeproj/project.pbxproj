@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0621BF6D1A99BE6C367C7D5A /* PersonalFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211CCA4650C00F189564FF98 /* PersonalFeedView.swift */; };
+		1A15264CDD09586865335E82 /* SupabaseConfig.example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411E124D0B1EBD26B1D868B7 /* SupabaseConfig.example.swift */; };
 		2D48B41CB27498AEB7A77A0A /* SupabaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8A3C0627B933E3E724EDE1 /* SupabaseClient.swift */; };
 		371ED2BA9C0529F77139BFA5 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80877ADFBF5C71E870AB0A46 /* AuthViewModel.swift */; };
 		57801EA4F81F908DCA503F3E /* DiscoveryFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C0B81EBB79E8CA5E11E60C /* DiscoveryFeedView.swift */; };
@@ -16,6 +17,7 @@
 		6B9FB4106340CC363736A695 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F1795399222814E9FEBE04 /* MainTabView.swift */; };
 		739C659102981106F49A0C91 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558BCCFFB6FE98A339E42CE /* SignInView.swift */; };
 		749DB5241A94EF75A0FEC0C8 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 79571FED7B5F0FE4753F5C6A /* Supabase */; };
+		9B58FF3C66D8AF9C45C6ACB3 /* SupabaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F21A784628D11C5FA679F8 /* SupabaseConfig.swift */; };
 		AAC3FE554400EF911CF90C6B /* InTouchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E931349809C0D512DEB918 /* InTouchApp.swift */; };
 		AFE5CDAAE417BE2313678410 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7EF60873DC975D30E91985 /* NotificationsView.swift */; };
 		BD0F70126A5C82462F21A07F /* CreateIntentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12399B8D812EEBD6099A466 /* CreateIntentView.swift */; };
@@ -29,7 +31,9 @@
 		211CCA4650C00F189564FF98 /* PersonalFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalFeedView.swift; sourceTree = "<group>"; };
 		2E8A3C0627B933E3E724EDE1 /* SupabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseClient.swift; sourceTree = "<group>"; };
 		3EBFBC8C13A3EC9C97B80255 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		411E124D0B1EBD26B1D868B7 /* SupabaseConfig.example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseConfig.example.swift; sourceTree = "<group>"; };
 		53F1795399222814E9FEBE04 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		66F21A784628D11C5FA679F8 /* SupabaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseConfig.swift; sourceTree = "<group>"; };
 		75119A8CA356FAE006C65394 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		80877ADFBF5C71E870AB0A46 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		AE7EF60873DC975D30E91985 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
@@ -183,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				2E8A3C0627B933E3E724EDE1 /* SupabaseClient.swift */,
+				411E124D0B1EBD26B1D868B7 /* SupabaseConfig.example.swift */,
+				66F21A784628D11C5FA679F8 /* SupabaseConfig.swift */,
 			);
 			path = Supabase;
 			sourceTree = "<group>";
@@ -278,6 +284,8 @@
 				6254CE3761DDD3BC4E4F98F4 /* ProfileView.swift in Sources */,
 				739C659102981106F49A0C91 /* SignInView.swift in Sources */,
 				2D48B41CB27498AEB7A77A0A /* SupabaseClient.swift in Sources */,
+				1A15264CDD09586865335E82 /* SupabaseConfig.example.swift in Sources */,
+				9B58FF3C66D8AF9C45C6ACB3 /* SupabaseConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +415,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = InTouch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -425,7 +435,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = InTouch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
