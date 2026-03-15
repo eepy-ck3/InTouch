@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0621BF6D1A99BE6C367C7D5A /* PersonalFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211CCA4650C00F189564FF98 /* PersonalFeedView.swift */; };
-		1A15264CDD09586865335E82 /* SupabaseConfig.example.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411E124D0B1EBD26B1D868B7 /* SupabaseConfig.example.swift */; };
 		2D48B41CB27498AEB7A77A0A /* SupabaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8A3C0627B933E3E724EDE1 /* SupabaseClient.swift */; };
 		371ED2BA9C0529F77139BFA5 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80877ADFBF5C71E870AB0A46 /* AuthViewModel.swift */; };
 		57801EA4F81F908DCA503F3E /* DiscoveryFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5C0B81EBB79E8CA5E11E60C /* DiscoveryFeedView.swift */; };
 		6254CE3761DDD3BC4E4F98F4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EDDF46C13B9086827EDF4D /* ProfileView.swift */; };
 		6339ABF80D00A3C7F7092A03 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75119A8CA356FAE006C65394 /* Models.swift */; };
+		667D32D10E60A56BF232D93D /* SupabaseConfig.example in Resources */ = {isa = PBXBuildFile; fileRef = 01E72EBF3070CAA01DB15023 /* SupabaseConfig.example */; };
 		6B9FB4106340CC363736A695 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F1795399222814E9FEBE04 /* MainTabView.swift */; };
 		739C659102981106F49A0C91 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D558BCCFFB6FE98A339E42CE /* SignInView.swift */; };
 		749DB5241A94EF75A0FEC0C8 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 79571FED7B5F0FE4753F5C6A /* Supabase */; };
@@ -26,12 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01E72EBF3070CAA01DB15023 /* SupabaseConfig.example */ = {isa = PBXFileReference; path = SupabaseConfig.example; sourceTree = "<group>"; };
 		18EC0273760D9AD952EF8FF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		1FF906983D5156C20909DC90 /* InTouch.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = InTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		211CCA4650C00F189564FF98 /* PersonalFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalFeedView.swift; sourceTree = "<group>"; };
 		2E8A3C0627B933E3E724EDE1 /* SupabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseClient.swift; sourceTree = "<group>"; };
 		3EBFBC8C13A3EC9C97B80255 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		411E124D0B1EBD26B1D868B7 /* SupabaseConfig.example.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseConfig.example.swift; sourceTree = "<group>"; };
 		53F1795399222814E9FEBE04 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		66F21A784628D11C5FA679F8 /* SupabaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseConfig.swift; sourceTree = "<group>"; };
 		75119A8CA356FAE006C65394 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				2E8A3C0627B933E3E724EDE1 /* SupabaseClient.swift */,
-				411E124D0B1EBD26B1D868B7 /* SupabaseConfig.example.swift */,
+				01E72EBF3070CAA01DB15023 /* SupabaseConfig.example */,
 				66F21A784628D11C5FA679F8 /* SupabaseConfig.swift */,
 			);
 			path = Supabase;
@@ -262,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C992987AAF2EFBA6A2F054B3 /* Assets.xcassets in Resources */,
+				667D32D10E60A56BF232D93D /* SupabaseConfig.example in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +285,6 @@
 				6254CE3761DDD3BC4E4F98F4 /* ProfileView.swift in Sources */,
 				739C659102981106F49A0C91 /* SignInView.swift in Sources */,
 				2D48B41CB27498AEB7A77A0A /* SupabaseClient.swift in Sources */,
-				1A15264CDD09586865335E82 /* SupabaseConfig.example.swift in Sources */,
 				9B58FF3C66D8AF9C45C6ACB3 /* SupabaseConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
