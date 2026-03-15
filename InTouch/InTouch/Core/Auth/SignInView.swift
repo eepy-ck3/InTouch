@@ -22,6 +22,27 @@ struct SignInView: View {
 
                 Spacer()
 
+                if auth.needsEmailConfirmation {
+                    VStack(spacing: 12) {
+                        Image(systemName: "envelope.circle.fill")
+                            .font(.system(size: 52))
+                            .foregroundStyle(Color.accentColor)
+                        Text("Check your email")
+                            .font(.title3.bold())
+                        Text("We sent a confirmation link to **\(email)**. Tap it to activate your account, then sign in.")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                            .multilineTextAlignment(.center)
+                        Button("Back to Sign In") {
+                            auth.needsEmailConfirmation = false
+                            isSignUp = false
+                        }
+                        .padding(.top, 4)
+                    }
+                    .padding(.horizontal, 8)
+                    Spacer()
+                } else {
+
                 // Form
                 VStack(spacing: 12) {
                     TextField("Email", text: $email)
@@ -74,6 +95,7 @@ struct SignInView: View {
                 .font(.footnote)
 
                 Spacer()
+                } // end else (not needsEmailConfirmation)
             }
             .padding(.horizontal, 32)
         }

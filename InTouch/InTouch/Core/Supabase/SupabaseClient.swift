@@ -7,5 +7,8 @@ import Supabase
 
 let supabase = SupabaseClient(
     supabaseURL: URL(string: SupabaseConfig.url)!,
-    supabaseKey: SupabaseConfig.anonKey
+    supabaseKey: SupabaseConfig.anonKey,
+    options: .init(
+        auth: .init(emitLocalSessionAsInitialSession: true)
+    )
 )

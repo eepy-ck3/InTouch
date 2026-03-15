@@ -24,10 +24,8 @@ targets:
       - package: Supabase
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.intouch.app
+        PRODUCT_BUNDLE_IDENTIFIER: com.colek.intouch
         SWIFT_VERSION: 5.9
         INFOPLIST_FILE: InTouch/Info.plist
         TARGETED_DEVICE_FAMILY: "1,2"
-        CODE_SIGNING_REQUIRED: NO
-        CODE_SIGNING_ALLOWED: NO
-        CODE_SIGN_IDENTITY: ""
+        CODE_SIGN_STYLE: Automatic

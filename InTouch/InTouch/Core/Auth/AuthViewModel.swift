@@ -9,6 +9,7 @@ final class AuthViewModel {
     var errorMessage: String?
 
     var isSignedIn: Bool { currentUser != nil }
+    var needsEmailConfirmation = false
 
     // MARK: - Session restore
     func restoreSession() async {
@@ -31,8 +32,11 @@ final class AuthViewModel {
                 email: email,
                 password: password
             )
-            if let user = response.user {
-                await fetchCurrentUser(id: user.id)
+            if response.session != nil {
+                await fetchCurrentUser(id: response.user.id)
+            } else {
+                // Email confirmation required
+                needsEmailConfirmation = true
             }
         } catch {
             errorMessage = error.localizedDescription
@@ -69,14 +73,13 @@ final class AuthViewModel {
     // MARK: - Fetch profile
     private func fetchCurrentUser(id: UUID) async {
         do {
-            let user: AppUser = try await supabase
+            let users: [AppUser] = try await supabase
                 .from("users")
                 .select()
                 .eq("id", value: id)
-                .single()
                 .execute()
                 .value
-            currentUser = user
+            currentUser = users.first
         } catch {
             errorMessage = error.localizedDescription
         }
