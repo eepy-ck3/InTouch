@@ -1,1 +1,0 @@
-/Users/colek/CK Projects/InTouch (Social App) - WIP/InTouch/InTouch.xcodeproj No profiles for 'com.intouch.app' were found: Xcode couldn't find any iOS App Development provisioning profiles matching 'com.intouch.app'.
