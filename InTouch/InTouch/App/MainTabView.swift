@@ -13,9 +13,9 @@ struct MainTabView: View {
                     Label("Discover", systemImage: "location.circle")
                 }
 
-            CreateIntentView()
+            CreateActivityView()
                 .tabItem {
-                    Label("New Intent", systemImage: "plus.circle.fill")
+                    Label("New Activity", systemImage: "plus.circle.fill")
                 }
 
             NotificationsView()

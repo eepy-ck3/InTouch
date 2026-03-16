@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh repo:*)",
+      "Bash(which gh:*)",
+      "Bash(which git:*)",
+      "Bash(which brew:*)",
+      "Bash(/opt/homebrew/bin/brew install:*)",
+      "Bash(cd:*)",
+      "Bash(/opt/homebrew/bin/gh api:*)",
+      "Bash(gh label:*)",
+      "Bash(brew list:*)",
+      "Read(//usr/local/bin/**)",
+      "Bash(export:*)",
+      "Read(//Users/colek/CK Projects/InTouch \\(Social App\\) - WIP/**)",
+      "Bash(gh api:*)",
+      "Bash(python3 -c \"import sys,json; [print\\(f''''  #{m[\"\"number\"\"]} {m[\"\"title\"\"]} — due {m[\"\"due_on\"\"][:10]}''''\\) for m in json.load\\(sys.stdin\\)]\" echo \"=== ISSUES ===\")",
+      "Bash(gh issue:*)",
+      "Bash(ls:*)",
+      "Bash(find:*)"
+    ]
+  }
+}

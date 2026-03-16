@@ -302,7 +302,7 @@ private struct LocationStepView: View {
             VStack(alignment: .leading, spacing: 8) {
                 Text("Where are you based?")
                     .font(.largeTitle.bold())
-                Text("Used to show nearby intents in the Discovery feed. You can change this later.")
+                Text("Used to show nearby activities in the Discovery feed. You can change this later.")
                     .foregroundStyle(.secondary)
             }
 

@@ -23,8 +23,8 @@ struct AppUser: Codable, Identifiable {
     }
 }
 
-// MARK: - Intent
-struct Intent: Codable, Identifiable {
+// MARK: - Activity
+struct Activity: Codable, Identifiable {
     let id: UUID
     let creatorId: UUID
     var title: String
@@ -89,27 +89,27 @@ struct Intent: Codable, Identifiable {
     }
 }
 
-// MARK: - Intent Join
-struct IntentJoin: Codable, Identifiable {
+// MARK: - Activity Join
+struct ActivityJoin: Codable, Identifiable {
     let id: UUID
-    let intentId: UUID
+    let activityId: UUID
     let userId: UUID
     let joinedAt: Date
     var user: AppUser?
 
     enum CodingKeys: String, CodingKey {
         case id
-        case intentId = "intent_id"
+        case activityId = "activity_id"
         case userId = "user_id"
         case joinedAt = "joined_at"
         case user
     }
 }
 
-// MARK: - Intent Comment
-struct IntentComment: Codable, Identifiable {
+// MARK: - Activity Comment
+struct ActivityComment: Codable, Identifiable {
     let id: UUID
-    let intentId: UUID
+    let activityId: UUID
     let userId: UUID
     var messageType: MessageType
     var body: String?
@@ -124,7 +124,7 @@ struct IntentComment: Codable, Identifiable {
 
     enum CodingKeys: String, CodingKey {
         case id
-        case intentId = "intent_id"
+        case activityId = "activity_id"
         case userId = "user_id"
         case messageType = "message_type"
         case body
@@ -141,7 +141,7 @@ struct AppNotification: Codable, Identifiable {
     let userId: UUID
     let type: String
     let payload: [String: AnyCodable]?
-    let intentId: UUID?
+    let activityId: UUID?
     var readAt: Date?
     let createdAt: Date
 
@@ -150,7 +150,7 @@ struct AppNotification: Codable, Identifiable {
         case userId = "user_id"
         case type
         case payload
-        case intentId = "intent_id"
+        case activityId = "activity_id"
         case readAt = "read_at"
         case createdAt = "created_at"
     }

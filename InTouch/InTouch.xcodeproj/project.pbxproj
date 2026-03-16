@@ -21,7 +21,7 @@
 		9B58FF3C66D8AF9C45C6ACB3 /* SupabaseConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F21A784628D11C5FA679F8 /* SupabaseConfig.swift */; };
 		AAC3FE554400EF911CF90C6B /* InTouchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E931349809C0D512DEB918 /* InTouchApp.swift */; };
 		AFE5CDAAE417BE2313678410 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE7EF60873DC975D30E91985 /* NotificationsView.swift */; };
-		BD0F70126A5C82462F21A07F /* CreateIntentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12399B8D812EEBD6099A466 /* CreateIntentView.swift */; };
+		B64BB7F20C95338AF010F2EA /* CreateActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC963CD957159F4406152B7 /* CreateActivityView.swift */; };
 		C992987AAF2EFBA6A2F054B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C86F97BB39B52B6429C81D4E /* Assets.xcassets */; };
 		E714E39F00744077D99F4539 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794AD597D110AFC956633F94 /* OnboardingView.swift */; };
 		F5B6CCBF84E929490A816834 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EBFBC8C13A3EC9C97B80255 /* ContentView.swift */; };
@@ -35,6 +35,7 @@
 		2E8A3C0627B933E3E724EDE1 /* SupabaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseClient.swift; sourceTree = "<group>"; };
 		3EBFBC8C13A3EC9C97B80255 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		53F1795399222814E9FEBE04 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		5EC963CD957159F4406152B7 /* CreateActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateActivityView.swift; sourceTree = "<group>"; };
 		66F21A784628D11C5FA679F8 /* SupabaseConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupabaseConfig.swift; sourceTree = "<group>"; };
 		75119A8CA356FAE006C65394 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		794AD597D110AFC956633F94 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		82D3171AFAAB387A43FF69C9 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		AE7EF60873DC975D30E91985 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		C86F97BB39B52B6429C81D4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D12399B8D812EEBD6099A466 /* CreateIntentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateIntentView.swift; sourceTree = "<group>"; };
 		D3E931349809C0D512DEB918 /* InTouchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InTouchApp.swift; sourceTree = "<group>"; };
 		D558BCCFFB6FE98A339E42CE /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		E5C0B81EBB79E8CA5E11E60C /* DiscoveryFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryFeedView.swift; sourceTree = "<group>"; };
@@ -83,8 +83,8 @@
 		6049EDBD5375F65B6001CF0E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				FD524056C229E6F87AA8E352 /* Activity */,
 				25F468118E878181A2CFBC69 /* Feed */,
-				894AC847435B17681B29691C /* Intent */,
 				E38220FFE9CB4A3D195578E6 /* Onboarding */,
 				7895D551678F3E3BA630EBA7 /* Profile */,
 			);
@@ -122,14 +122,6 @@
 				D558BCCFFB6FE98A339E42CE /* SignInView.swift */,
 			);
 			path = Auth;
-			sourceTree = "<group>";
-		};
-		894AC847435B17681B29691C /* Intent */ = {
-			isa = PBXGroup;
-			children = (
-				D12399B8D812EEBD6099A466 /* CreateIntentView.swift */,
-			);
-			path = Intent;
 			sourceTree = "<group>";
 		};
 		9610A7740837ED115876F8B4 /* Shared */ = {
@@ -204,6 +196,14 @@
 				82D3171AFAAB387A43FF69C9 /* OnboardingViewModel.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		FD524056C229E6F87AA8E352 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				5EC963CD957159F4406152B7 /* CreateActivityView.swift */,
+			);
+			path = Activity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +284,7 @@
 			files = (
 				371ED2BA9C0529F77139BFA5 /* AuthViewModel.swift in Sources */,
 				F5B6CCBF84E929490A816834 /* ContentView.swift in Sources */,
-				BD0F70126A5C82462F21A07F /* CreateIntentView.swift in Sources */,
+				B64BB7F20C95338AF010F2EA /* CreateActivityView.swift in Sources */,
 				57801EA4F81F908DCA503F3E /* DiscoveryFeedView.swift in Sources */,
 				AAC3FE554400EF911CF90C6B /* InTouchApp.swift in Sources */,
 				6B9FB4106340CC363736A695 /* MainTabView.swift in Sources */,
