@@ -11,6 +11,12 @@ final class AuthViewModel {
     var isSignedIn: Bool { currentUser != nil }
     var needsEmailConfirmation = false
 
+    // Onboarding is needed if full_name is still empty (set by trigger default)
+    var needsOnboarding: Bool {
+        guard let user = currentUser else { return false }
+        return user.fullName.trimmingCharacters(in: .whitespaces).isEmpty
+    }
+
     // MARK: - Session restore
     func restoreSession() async {
         do {
@@ -68,6 +74,12 @@ final class AuthViewModel {
         } catch {
             errorMessage = error.localizedDescription
         }
+    }
+
+    // MARK: - Refresh current user profile
+    func refreshCurrentUser() async {
+        guard let id = currentUser?.id else { return }
+        await fetchCurrentUser(id: id)
     }
 
     // MARK: - Fetch profile

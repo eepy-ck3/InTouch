@@ -6,7 +6,11 @@ struct ContentView: View {
     var body: some View {
         Group {
             if auth.isSignedIn {
-                MainTabView()
+                if auth.needsOnboarding {
+                    OnboardingView()
+                } else {
+                    MainTabView()
+                }
             } else {
                 SignInView()
             }
